@@ -2,6 +2,7 @@ package org.example.times1;
 
 import org.example.Calculator2;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Times1 {
@@ -43,6 +44,17 @@ public class Times1 {
                 break;
             }
 
+            // 연산 결과 저장
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (yes 입력 시 삭제)");
+            if ("yes".equals(sc.next())) {
+                calculator.removeResult();
+            }
+
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (yes 입력 시 조회)");
+            if ("yes".equals(sc.next())) {
+                List<Double> resultList = calculator.getResultList();
+                System.out.println("저장된 연산결과는 : " + resultList.toString());
+            }
         }
     }
 }

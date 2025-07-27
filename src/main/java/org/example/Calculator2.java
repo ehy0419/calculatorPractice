@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.List;
+
 public class Calculator2 {
 
     public double calculate(int firstNumber, int secondNumber, char operator) {
@@ -24,6 +26,19 @@ public class Calculator2 {
                         default:
                             throw new IllegalArgumentException("사칙연산 기호는 사칙연산 기호는 +, -, *, / 중 하나여야 합니다.");
         }
+        addResult(result);
         return result;
+    }
+
+    public List<Double> getResultList() {
+        return resultList;
+    }
+
+    public void addResult(double result) {
+        resultList.add(result);
+    }
+
+    public void removeResult(double result) {
+        resultList.remove(result);
     }
 }
