@@ -45,6 +45,6 @@ public class Calculator2 {
 
     // resultList.remove(result); 에서는 0 으로 수정하니 되는데 index는 뭐지..
     public void removeResult() {
-        resultList.remove(result);
+        resultList.remove(0);
     }
 }
