@@ -1,8 +1,12 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator2 {
+
+    // resultList 오류 해결
+    private List<Double> resultList = new ArrayList<Double>();
 
     public double calculate(int firstNumber, int secondNumber, char operator) {
         double result;
@@ -30,6 +34,7 @@ public class Calculator2 {
         return result;
     }
 
+    // 상단으로~~
     public List<Double> getResultList() {
         return resultList;
     }
@@ -38,7 +43,8 @@ public class Calculator2 {
         resultList.add(result);
     }
 
-    public void removeResult(double result) {
+    // resultList.remove(result); 에서는 0 으로 수정하니 되는데 index는 뭐지..
+    public void removeResult() {
         resultList.remove(result);
     }
 }
