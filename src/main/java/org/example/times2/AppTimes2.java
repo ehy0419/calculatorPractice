@@ -1,5 +1,6 @@
 package org.example.times2;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class AppTimes2 {
@@ -35,6 +36,7 @@ public class AppTimes2 {
             System.out.println("결과 : " + result);
             // result Calcultor2 클래스 연산값 가져오기
 
+//            cal2.addResult(result);
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String answer = sc2.next();
@@ -42,7 +44,16 @@ public class AppTimes2 {
                 break;
             }
 
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (yes 입력 시 삭제)");
+            if ("yes".equals(sc2.next())) {
+                cal2.removeResult();
+            }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (yes 입력 시 조회)");
+            if ("yes".equals(sc2.next())) {
+                List<Double> resultList = cal2.getResultList();
+                System.out.println("저장된 연산결과는 : " + resultList.toString());
+            }
 
             ///  차이점 확인하기
 //            if ("exit".equals(answer)) {
