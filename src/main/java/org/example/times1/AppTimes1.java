@@ -1,11 +1,9 @@
 package org.example.times1;
 
-import org.example.Calculator2;
-
 import java.util.List;
 import java.util.Scanner;
 
-public class Times1 {
+public class AppTimes1 {
     public static void main(String[] args) {
         // new 이후 클래스 가져오기
         Scanner sc = new Scanner(System.in);
