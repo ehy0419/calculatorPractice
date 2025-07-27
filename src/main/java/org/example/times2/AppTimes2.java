@@ -6,6 +6,8 @@ public class AppTimes2 {
     public static void main(String[] args) {
         Scanner sc2 = new Scanner(System.in);
 
+        Calculator2 cal2 = new Calculator2();
+
         /// 양의 정수 입력 받기
         while(true) {
             System.out.print("첫 번째 숫자를 입력하세요.");
@@ -26,26 +28,7 @@ public class AppTimes2 {
             System.out.print("사칙연산 기호를 입력하세요 (+, -, *, /): ");
             char operator = sc2.next().charAt(0);
 
-            switch (operator) {
-                case '+':
-                    System.out.println("결과: " + (firstNumber + secondNumber));
-                    break;
-                case '-':
-                    System.out.println("결과: " + (firstNumber - secondNumber));
-                    // () 처리 안 하니 연산자 - 계산 안됨
-                    break;
-                case '*':
-                    System.out.println("결과: " + (firstNumber * secondNumber));
-                    break;
-                case '/':
-                    if (secondNumber == 0) {
-                        throw new IllegalArgumentException("나눗셈 연산에서 분모(두 번째 정수)가 0일 수 없습니다.");
-                    }
-                    System.out.println("결과: " + (firstNumber / secondNumber));
-                    break;
-                default:
-                    throw new IllegalArgumentException("나눗셈 연산에서 분모(두 번째 정수)가 0일 수 없습니다.");
-            }
+            double result = cal2
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String answer = sc2.next();
