@@ -15,7 +15,7 @@ public class Times1 {
         // while (true) { - 반복문 내용 - } 반복문
         while (true) {
             // sout
-            System.out.println("첫 번째 숫자를 입력하세요: ");
+            System.out.print("첫 번째 숫자를 입력하세요: ");
             // 정수 숫자는 int 로
             int firstNumber = sc.nextInt();
             // firstNumber의 출처는 Calculator2 에서 매개변수 선언!
@@ -23,7 +23,7 @@ public class Times1 {
                 System.out.println("음수는 입력할 수 없습니다. 프로그램을 재시작합니다.");
                 continue;
             }
-            System.out.println("두 번째 숫자를 입력하세요: ");
+            System.out.print("두 번째 숫자를 입력하세요: ");
             int secondNumber = sc.nextInt();
             // secondNumber의 출처는 Calculator2 에서 매개변수 선언!
             if (secondNumber < 0) {
@@ -31,7 +31,7 @@ public class Times1 {
                 continue;
             }
 
-            System.out.println("사칙연산 기호를 입력하세요 (+, -, *, /): ");
+            System.out.print("사칙연산 기호를 입력하세요 (+, -, *, /): ");
             char operator = sc.next().charAt(0);
 
             double result = calculator.calculate(firstNumber, secondNumber, operator);
